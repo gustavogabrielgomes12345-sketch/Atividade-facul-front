@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade teste Front Ending</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<link rel="icon" href="https://images.icon-icons.com/66/PNG/128/tools_theactivity_themonitor_13009.png"
+  type="image/png">
+
+<body class="bg-light">
+    
+  <nav class="navbar navbar-dark bg-dark shadow">
+    <!-- 'justify-content-start' mantém os itens próximos um do outro -->
+    <div class="container-fluid d-flex justify-content-start align-items-center">
+        
+        <!-- Item 1: Contador (Agora sem estilo extra, apenas o link limpo) -->
+        <a class="navbar-brand fs-6 me-2" href="index.html">Contador</a>
+
+        <!-- Item 2: Tabuada (Com o seu estilo original de destaque) -->
+        <div id="navbarNav">
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link active bg-secondary bg-opacity-25 border-start border-2 border-secondary px-3" 
+                       href="Tabuada index.html">Tabuada</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+  <div class="container mt-5">
+    <div class="card shadow">
+      <div class="card-header bg-dark text-white text-center">
+        <h5 class="mb-0">Gerador de Tabuada (As 4 Operações)</h5>
+      </div>
+      <div class="card-body text-center">
+        <div class="row g-3 align-items-center justify-content-center mb-4">
+          <div class="col-auto">
+            <label for="txtNum" class="fw-bold">Digite um número:</label>
+          </div>
+          <div class="col-sm-3">
+            <input type="number" id="txtNum" class="form-control border-secondary shadow-sm" placeholder="Ex: 5"
+              min="0">
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-secondary shadow-sm" onclick="gerarTabuada()">Gerar Tabuadas</button>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped align-middle shadow-sm">
+            <thead class="table-dark">
+              <tr>
+                <th class="w-25">Adição (+)</th>
+                <th class="w-25">Subtração (-)</th>
+                <th class="w-25">Multiplicação (x)</th>
+                <th class="w-25">Divisão (÷)</th>
+              </tr>
+            </thead>
+            <tbody id="corpoTabuada">
+              <tr>
+                <td colspan="4" class="text-muted">Digite um número acima para calcular...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net"></script>
+  <script src="tabuada.js"></script>
+</body>
+
+</html>
